@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkinsci.plugins.workflow.demo</groupId>
-  <artifactId>demo-war</artifactId>
+  <artifactId>demo-war-corelogic</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>demo-war Maven Webapp</name>
