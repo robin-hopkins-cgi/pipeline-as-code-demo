@@ -36,8 +36,18 @@ node {
 def mvn(args) {
     sh "echo maven stuff ${args}"
     sh "id"
-    println "ls".execute().text 
-    println "eco $PATH".execute().text
+    println "pwd".execute().text 
+    println "ls -al".execute().text 
+    //   println "eco $PATH".execute().text
+    // PULL IN ENVIRONMENT VARIABLES
+    // Jenkins makes these variables available for each job it runs
+    def buildNumber = env.BUILD_NUMBER
+    def workspace = env.WORKSPACE
+    def buildUrl = env.BUILD_URL
+    // PRINT ENVIRONMENT TO JOB
+    echo "workspace directory is $workspace"
+    echo "build URL is $buildUrl"
+
     sh "set"
     sh "echo dollar{tool 'Maven 3.x'}/bin/mvn ${args}"
     sh "/home/robin/mvn333/apache-maven-3.3.3/bin/mvn ${args}"
