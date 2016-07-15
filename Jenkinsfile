@@ -35,9 +35,12 @@ node {
 
 def mvn(args) {
     sh "echo maven stuff ${args}"
+    sh "id"
+    sh "echo $PATH"
+    sh "set"
     sh "echo dollar{tool 'Maven 3.x'}/bin/mvn ${args}"
-    sh "mvn ${args}"
-
+    sh "/home/robin/mvn333/apache-maven-3.3.3/bin/mvn ${args}"
+    sh "set"
 }
 
 def runTests(duration) {
