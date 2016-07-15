@@ -35,7 +35,7 @@ node {
 
 def mvn(args) {
     sh "echo maven stuff ${args}"
-    sh "echo ${tool 'Maven 3.x'}/bin/mvn ${args}"
+    sh "echo dollar{tool 'Maven 3.x'}/bin/mvn ${args}"
     sh "mvn ${args}"
 
 }
