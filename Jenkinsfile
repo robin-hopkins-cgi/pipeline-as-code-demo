@@ -36,7 +36,8 @@ node {
 def mvn(args) {
     sh "echo maven stuff ${args}"
     sh "id"
-    sh "echo $PATH"
+    println "ls".execute().text 
+    println "eco $PATH".execute().text
     sh "set"
     sh "echo dollar{tool 'Maven 3.x'}/bin/mvn ${args}"
     sh "/home/robin/mvn333/apache-maven-3.3.3/bin/mvn ${args}"
@@ -46,7 +47,7 @@ def mvn(args) {
 def runTests(duration) {
     node {
         sh "sleep ${duration}"
-        }
+       } 
     }
 
 def deploy(id) {
